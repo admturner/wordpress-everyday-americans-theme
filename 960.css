@@ -1,0 +1,297 @@
+/*
+	960 Grid System ~ Core CSS.
+	Learn more ~ http://960.gs/
+
+	Licensed under GPL and MIT.
+	
+	Modified to generalize grid sizes to a WP Thematic Child theme without using .container_12, 
+	simply to easily control column widths on special pages, like home page, or certain components 
+	of footer or header, without having to do math over and over again; will see if it works!
+	C.A.R. 2-2-2011
+*/
+
+/* =Containers
+--------------------------------------------------------------------------------*/
+
+.container_12
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+}
+
+/* =Grid >> Global
+--------------------------------------------------------------------------------*/
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12
+{
+	display: inline;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.container_12 .grid_3, .grid_3
+{
+	width: 220px;
+}
+
+.container_12 .grid_6, .grid_6
+{
+	width: 460px;
+}
+
+.container_12 .grid_9, .grid_9
+{
+	width: 700px;
+}
+
+.container_12 .grid_12, .grid_12
+{
+	width: 940px;
+}
+
+/* =Grid >> Children (Alpha ~ First, Omega ~ Last)
+--------------------------------------------------------------------------------*/
+
+.alpha
+{
+	margin-left: 0;
+}
+
+.omega
+{
+	margin-right: 0;
+}
+
+/* =Grid >> 12 Columns
+--------------------------------------------------------------------------------*/
+
+.container_12 .grid_1, .grid_1
+{
+	width: 60px;
+}
+
+.container_12 .grid_2, .grid_2
+{
+	width: 140px;
+}
+
+.container_12 .grid_4, .grid_4
+{
+	width: 300px;
+}
+
+.container_12 .grid_5, .grid_5
+{
+	width: 380px;
+}
+
+.container_12 .grid_7, .grid_7
+{
+	width: 540px;
+}
+
+.container_12 .grid_8, .grid_8
+{
+	width: 620px;
+}
+
+.container_12 .grid_10, .grid_10
+{
+	width: 780px;
+}
+
+.container_12 .grid_11, .grid_11
+{
+	width: 860px;
+}
+
+
+/* =Prefix Extra Space >> Global
+--------------------------------------------------------------------------------*/
+
+.container_12 .prefix_3, .prefix_3
+{
+	padding-left: 240px;
+}
+
+.container_12 .prefix_6, .prefix_6
+{
+	padding-left: 480px;
+}
+
+.container_12 .prefix_9, .prefix_9
+{
+	padding-left: 720px;
+}
+
+/* =Prefix Extra Space >> 12 Columns
+--------------------------------------------------------------------------------*/
+
+.container_12 .prefix_1, .prefix_1
+{
+	padding-left: 80px;
+}
+
+.container_12 .prefix_2, .prefix_2
+{
+	padding-left: 160px;
+}
+
+.container_12 .prefix_4, .prefix_4
+{
+	padding-left: 320px;
+}
+
+.container_12 .prefix_5, .prefix_5
+{
+	padding-left: 400px;
+}
+
+.container_12 .prefix_7, .prefix_7
+{
+	padding-left: 560px;
+}
+
+.container_12 .prefix_8, .prefix_8
+{
+	padding-left: 640px;
+}
+
+.container_12 .prefix_10, .prefix_10
+{
+	padding-left: 800px;
+}
+
+.container_12 .prefix_11, .prefix_11
+{
+	padding-left: 880px;
+}
+
+
+
+/* =Suffix Extra Space >> Global
+--------------------------------------------------------------------------------*/
+
+.container_12 .suffix_3, .suffix_3
+{
+	padding-right: 240px;
+}
+
+.container_12 .suffix_6, .suffix_6
+{
+	padding-right: 480px;
+}
+
+.container_12 .suffix_9, .suffix_9
+{
+	padding-right: 720px;
+}
+
+/* =Suffix Extra Space >> 12 Columns
+--------------------------------------------------------------------------------*/
+
+.container_12 .suffix_1, .suffix_1
+{
+	padding-right: 80px;
+}
+
+.container_12 .suffix_2, .suffix_2
+{
+	padding-right: 160px;
+}
+
+.container_12 .suffix_4, .suffix_4
+{
+	padding-right: 320px;
+}
+
+.container_12 .suffix_5, .suffix_5
+{
+	padding-right: 400px;
+}
+
+.container_12 .suffix_7, .suffix_7
+{
+	padding-right: 560px;
+}
+
+.container_12 .suffix_8, .suffix_8
+{
+	padding-right: 640px;
+}
+
+.container_12 .suffix_10, .suffix_10
+{
+	padding-right: 800px;
+}
+
+.container_12 .suffix_11, .suffix_11
+{
+	padding-right: 880px;
+}
+
+
+
+/* =Clear Floated Elements
+--------------------------------------------------------------------------------*/
+
+/* http://sonspring.com/journal/clearing-floats */
+
+html body * span.clear,
+html body * div.clear,
+html body * li.clear,
+html body * dd.clear
+{
+	background: none;
+	border: 0;
+	clear: both;
+	display: block;
+	float: none;
+	font-size: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/* http://www.positioniseverything.net/easyclearing.html */
+
+.clearfix:after
+{
+	clear: both;
+	content: '.';
+	display: block;
+	visibility: hidden;
+	height: 0;
+}
+
+.clearfix
+{
+	display: inline-block;
+}
+
+* html .clearfix
+{
+	height: 1%;
+}
+
+.clearfix
+{
+	display: block;
+}

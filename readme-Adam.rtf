@@ -1,0 +1,63 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf350
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww21720\viewh15900\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 General Notes for Adam:\
+\
+By the time you read this, I will have installed and activated Maintenance Mode and the childtheme, so you can do your thing behind the scenes. To actually get the maintenance mode version of the home page to work, I had to open MAMO's maintenance-mode_theme_default.php file, and put in all my markup from the temporary home page, home.php, and insert all the css into the head, AND put a copy of the images folder in the root directory of tah-loudoun, because otherwise the images would not load. \
+\
+I tried several different absolute paths that got me exactly nowhere. SO--when we get the whole theme installed and functioning, I'll remove that images folder from tah-loudoun/ \
+\
+In any event: When I try to preview or activate thematic or the child theme, I just get a generic-looking page\'85not sure why, I am guessing it has to do with the template hierarchy in thematic themes? I've activated the theme anyway, and the Maintenance Mode page does display correctly from a logged out browser. I'll leave it to you to figure all this techy stuff out!\
+\
+Here's some important info/questions:\
+\
+------------------------------------------------------\
+\
+1. This site does not have cohort pages or cohort splash pages; instead, we are using "theme" in place of cohort wherever it appears in the php. I've changed some of these already in the child theme functions.php but did not catch them all.\
+\
+*********************************************************\
+2. Static markup files I created and what they correspond to in WP:\
+//I think all of these are loaded into your page.php and use if statements and conditionals to load different markup?//\
+public-home.html   --->  index.php or home.php\
+about.html	   --->  about.php\
+category-page.html --->  category.php?\
+single-post-page.html  ---> single.php?\
+schedule.html      --->  schedule.php\
+\
+theme-splash.html  --->  page-theme-splash.php\
+\
+\
+*********************************************************\
+3. I have modified thematic's 2c-r-fixed.css and 3c-r-fixed-primary.css to suit our needs, and they have been overwritten in thematic extensions/layouts\
+\
+\
+*********************************************************\
+4. we are not using the dropdown suckerfish menus.js, so this does not need to be loaded. I think you can remove that action(?) in functions.php\
+\
+Two tips from themeshaper forum:\
+http://themeshaper.com/forums/topic/remove-thematic_head_scripts\
+\
+\
+==========\
+removes loading hoverIntent, superfish, supersubs, and thematic-dropdowns js from header (have to use init due to order of how WP files are loaded:\
+=========\
+function remove_scripts() \{\
+    remove_action('wp_head','thematic_head_scripts');\
+\}\
+add_action('init', 'remove_scripts');\
+\
+\
+\
+===========\
+removes the jquery script in the header:\
+==========\
+function remove_scripts() \{\
+    if (!is_admin()) \{\
+	    wp_deregister_script('jquery');\
+	\}\
+	remove_action('wp_head','thematic_head_scripts');\
+\}\
+add_action('init', 'remove_scripts');}

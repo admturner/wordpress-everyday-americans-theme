@@ -1,0 +1,252 @@
+/* -------------------------------------------------------------- 
+   
+   Set default typography for Loudoun TAH--adapted from Blueprint css
+   with modifications for rhythmic type settings, based on baseline grid
+   of multiples of 6
+
+   Includes font-sizes, margins, line-heights, colors, and alignments
+   Set generic styles first, then add exceptions
+     
+-------------------------------------------------------------- */   
+
+body, input, textarea {
+    color:#320;    
+    font: 14px Georgia, serif;
+    line-height:18px;
+}
+
+/* Headings
+-------------------------------------------------------------- */
+
+h1,h2,h3,h4,h5,h6 { 
+	font-weight:normal;
+	/* clear:both;  if you use this, you can't float images to left of heads, they always go on their own line */
+}
+h3,h4,h5,h6 {clear:both;}
+
+h2,h3,h4,h5 {
+	font-family: Georgia, serif;
+}
+
+h6 {font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:10px;font-weight:bold;}
+
+h1, h6, 
+#front-page #featured h3, 
+#front-page #public-pages h3,
+#front-page #calendar h3, 
+#front-page #learn-more h4,
+#cohort-pages-menu ul li,
+.aside h3, .aside ul li h3, .aside ul li h4,
+#front-page #learn-more h4,
+#front-page #learn-more p {
+	font-family: 'LeagueGothicRegular', 'Arial Narrow', sans-serif; letter-spacing: .025em;
+}
+
+h1 {text-align:center;}
+	.single h1 {text-align:left; margin-left:174px;}
+	
+h1, h3 {color:#665D4D;}
+	h2, h3, h4, h5, h6 {color: #586C7A;}
+
+h1, h1.entry-title, h1.page-title, h2.entry-title {
+	font-size:27px; line-height:30px;
+} 
+
+/* for the generic "post" pages */
+.singular h1.entry-title, .single h1.entry-title {margin-top:0; margin-bottom:24px;}
+
+.slug-podcasts h1.entry-title, .slug-primary-source-activities h1.entry-title, .slug-lessons h1.entry-title, .slug-resources h1.entry-title 
+/* .slug-about-everydayamericans h1.entry-title */ {
+	text-indent: -9999px; display:block; height:60px; width:336px; background: #43161b;margin:0 auto 36px;
+} /* to use text replacement with background images on the public pages */
+	.slug-podcasts h1.entry-title {background: url(images/hd_podcasts.png) top center no-repeat;}
+	.slug-primary-source-activities h1.entry-title {background: url(images/hd_PSAs.png) top center no-repeat;}
+	.slug-resources h1.entry-title {background: url(images/hd_resources.png) top center no-repeat;}
+	.slug-lessons h1.entry-title {background: url(images/hd_lessons.png) top center no-repeat;}
+	/* .slug-about-everydayamericans h1.entry-title {background: url(images/hd_about.png) top center no-repeat;} */
+
+h2, #content h2 {
+	font-size:18px; line-height:24px; margin:12px 0 6px;
+}
+
+h3 {
+	font-size:15px; line-height:18px; margin:10px 0 8px;
+}
+	.slug-schedule .entry-content h3 {color: #665d4d;border-top:1px dotted #665d4d;font-weight:bold; margin-top:12px; padding-top:6px;}
+
+	.aside h3, .aside h4 {
+		font-size:18px;line-height:24px; letter-spacing:1px; margin:0 0 6px;
+	}
+
+	#front-page #content h3 {
+		font-size:27px;
+	}
+
+	#front-page #calendar h3 {color: #c6beb5;text-transform:uppercase;letter-spacing:.025em;} 
+	#front-page #public-pages h3, #front-page #featured h3 {color: #665d4d;text-transform:uppercase;letter-spacing:.025em;}
+	
+	#front-page #coming-events h3, #front-page #learn-more h4 {color:#c6beb5;}
+
+h4, h5, h6 {
+	font-size:12px; line-height:18px; margin:12px 0 6px;
+}
+
+h5 {text-transform:uppercase;}
+	#front-page ul li h4{font-size:16px;}
+	#front-page #learn-more h4 {font-size:24px;line-height:1.2;color:white;}
+
+
+	/* entry-specific typography */
+	.entry-meta p {margin-bottom:12px;}
+	.entry-meta, .entry-utility {font-size:11px;font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;} 
+	.entry-meta .author, .entry-meta .entry-date {text-transform:uppercase;}
+	.entry-meta .author {font-weight:bold;}
+	.entry-content p {overflow:hidden;}
+	.entry-content img {float:left;margin: 0 18px 12px 0;}
+
+	/* footer-specifc typography */
+	#footer h3 {margin-top:0;}
+	#footer p, #footer ul li, #footer h2, #footer h3, #footer a:link, #footer a:visited, #siteinfo {color:#f3f3ea;font-family:"HelveticaNeue", Helvetica, Arial, sans-serif;font-weight:normal;} 
+	#footer ul {list-style:none;} 
+
+/* Text elements
+-------------------------------------------------------------- */
+
+p {
+    font-size: 14px; margin:0 0 18px; line-height:24px;
+}
+	#front-page #public-pages ul li p {line-height:18px;margin:0 0 6px;}
+	#front-page #learn-more p {font-size:17px;}
+	
+	/* lists */
+ul {
+	margin: 0 0 18px 0px;
+	list-style:square outside;
+	padding-left:9px;
+}
+	#access #strand-pages ul#menu-strand-pages {list-style:none;} 
+	
+	#footer ul {margin-left:0; padding-left:0;}
+	#subsidiary ul li, #subsidiary .textwidget p, #subsidiary ul li {font-size:11px;} 
+	#subsidiary ul li {margin-bottom:0px;}
+	#subsidiary .textwidget p, #subsidiary ul li {line-height:18px;}
+	
+.singular .main-aside ul, .not-singular .main-aside ul {padding:0;list-style-type:none;}
+	.singular .main-aside ul ul, .not-singular .main-aside ul ul {/*list-style-type:square;padding-left:6px;*/} 
+	.singular .main-aside ul ul li, .not-singular .main-aside ul ul li {margin-bottom:8px;font-style:italic;line-height:16px;}
+
+	#splash-assignments ul {
+		list-style-type: none;
+		padding-left: 0;
+	}
+	
+	#splash-assignments ul li a {
+		font-weight:bold;
+	}
+
+	#splash-assignments ul.children {
+		font-size:13px; font-style:italic; 
+		font-family:'HelveticaNeue', Helvetica, Arial, sans-serif; 
+	}
+
+	#splash-assignments ul.children li a {
+		font-weight:normal;		
+	}
+
+li {
+	margin-bottom:8px; line-height:20px;
+}
+.aside ul li {
+	font-size:13px;line-height: 18px; color:#586c7a;font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif; margin-bottom:6px;
+}
+
+ol {
+	margin: 0 0 18px 6px;
+	list-style-type: decimal;
+}
+
+ol ol {
+	list-style:upper-alpha;
+}
+ol ol ol {
+	list-style:lower-roman;
+}
+ol ol ol ol {
+	list-style:lower-alpha;
+}
+ul ul, ol ol, ul ol, ol ul {
+	margin-bottom:12px;
+}
+dl	{
+    margin:0 18px;
+}
+dt {
+    font-weight:bold;
+}
+dd {
+	margin-bottom:18px;
+}
+	
+	/* miscellaneous text elements */
+strong {
+	font-weight: bold;
+}
+cite, em, i {
+	font-style: italic;
+}
+blockquote {
+	margin: 0 36px;
+}
+blockquote em, blockquote i, blockquote cite {
+	font-style:normal;
+}
+pre {
+	font:11px Monaco, monospace;
+	line-height:18px;
+	margin-bottom:18px;
+}
+code {
+	font:11px Monaco, monospace; color:#333;
+}
+abbr, acronym {
+  border-bottom:1px dotted #333;
+  cursor: help;
+}
+ins {
+	text-decoration:none;
+}
+sup,
+sub {
+	height: 0;
+	line-height: 1;
+	vertical-align: baseline;
+	position: relative;
+	
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+
+
+.more {font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:10px; text-transform:uppercase;font-weight:bold;}
+
+/* Pullquotes
+-------------------------------------------------------------- */
+
+blockquote.left {
+	float: left;
+	margin-left:0;
+	margin-right:24px;
+	text-align: right;
+	width: 33%;
+}
+blockquote.right {
+	float: right;
+	margin-left:24px;
+	margin-right:0;
+	text-align: left;
+	width: 33%;
+}

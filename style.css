@@ -1,0 +1,322 @@
+/*   
+Theme Name: Thematic Child Theme for Everyday Americans, Exceptional Americans
+Description: Two-column or three-column child theme; vintage color scheme: tan, slate blue, maroon, developed by Adam Turner and designed by Chris Raymond
+Author: Chris Raymond
+Author URI: http://www.designtank.ws/
+Template: thematic
+Version: 0.2.0-1
+*/
+
+/*
+	Thematic is (c) Ian Stewart http://themeshaper.com/
+	TAH child theme developed by Adam Turner and designed by Chris Raymond (http://www.designtank.ws)
+*/
+
+/*
+	Changes	
+	@since 0.2.0 Adam added margin-top:0; to #footer to get rid of gap between footer and content
+	@since 0.2.0-1 Adam removed bullets from #splash assignments ul list
+	@since 0.2.0-1 Chris added selectors for href attributes (file types, external links)
+*/
+
+/* Reset browser defaults */
+@import url('../thematic/library/styles/reset.css');
+
+
+/* Apply a basic layout */
+@import url('../thematic/library/layouts/2c-r-fixed.css');
+
+/* Apply basic image styles */
+@import url('../thematic/library/styles/images.css');
+
+/* Apply default theme styles and colors */
+/* It's better to actually copy over default.css into this file (or link to a copy in your child theme) if you're going to do anything outrageous
+@import url('../thematic/library/styles/default.css'); */
+
+/* Prepare theme for plugins
+@import url('../thematic/library/styles/plugins.css'); */
+
+/* import styles for MyCalendar 
+@import url('myCalendar.css');*/
+
+/* CUSTOM CSS FOR THIS CHILD THEME */
+@import url('typography-tah.css'); /* put all typographic styles in here to make it easier to troubleshoot */
+@import url('league_gothic/league-gothic.css'); /* the @font-face kit for league-gothic; the font files are in css/league_gothic*/
+
+/* =Global Elements
+-------------------------------------------------------------- */
+
+/* Links Styling*/
+h1 a:link, h1 a:visited {color:#665d4d;}
+h2 a:link, h3 a:link, h4 a:link, h5 a:link, h6 a:link,
+h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {color:#586c7a;}
+
+#front-page #header ul.menu a:visited, #front-page #footer a:visited, #front-page #learn-more a, #front-page #learn-more a:visited {color:#f3f3ea;} 
+	#header #access ul#menu-strand-pages.menu li a {color:;}
+#front-page #calendar a.more:visited {color:#fff;}
+#front-page #featured a:visited {color:#586C7A;}
+#front-page #footer #siteinfo a:visited {color:#e1dace;}
+
+a.read_more, a.more {font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:10px; text-transform:uppercase;}
+.entry-utility a {font-style:italic;}
+a:link {color:#43161b;text-decoration:none;font-weight:normal;}
+a:visited, .aside a:visited {color:#43161b;text-decoration:none;}
+li.register a, li.register a:visited {color: #f3f3ea;}
+a:hover, a:active {text-decoration:underline !important; /* color: #602027; */}
+
+
+	/* utility classes */
+.clearer {clear:both;}
+.hide-text {text-indent:-9999px}
+.sans-serif {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}
+.knockout {color:#fff;}
+a img {border:0px;}
+
+.flt-left {float:left;margin:6px 20px 6px 0;}
+.flt-right {float:right;margin:6px 00px 6px 20px;}
+
+/* =Structural
+-------------------------------------------------------------- */
+body {margin-top:0;padding:0;background: url('images/bg_html.jpg');}
+	#wrapper {width:960px;margin:0 auto;}
+	#main {background: url('images/bg_body.jpg');width:960px;padding-top:0px;}
+
+.singular #container {width:620px;margin-bottom:18px;}
+.singular #content, .single #content, .not-singular #content {width:600px;margin-bottom:18px;}
+.single #content, .singular #content, .not-singular #content, .category #content {padding:0px 18px 0 20px;margin:60px 0 18px;background:transparent url('images/bg_vertical-rule.gif') top right repeat-y;}
+.singular #primary {width:240px;margin:66px 0 18px 20px;border:none;padding:24px 0;}
+	.singular #primary.main-aside {right:60px;}
+.category #primary {float:left;width:240px;margin:66px 0 18px 60px;}
+
+#primary {border:0px;}
+
+/* =Header CHANGE CSS TO POSITION BRANDING AND ACCESS ABSOLUTELY AND
+DISPLAY:NONE on FRONT-PAGE; USE .FRONT-PAGE SPECIFIC BACKGROUND FOR HEADER
+-------------------------------------------------------------- */
+
+#header {width:960px;
+    z-index:2; margin:0;background: transparent url('images/bg_header-gradient-wide2.jpg') repeat-x 0 0px;height:115px;padding:0;
+}
+#branding {
+    height:54px; width:704px; position:absolute;top:60px;left:128px;
+}
+#blog-title {
+    font-family:Arial,sans-serif;
+    font-size:34px;
+    font-weight:bold;
+    line-height:40px;
+}
+#blog-title a {
+    color:#586c7a; text-decoration:none;display:block; height:54px; width:704px; text-indent:-9999px;
+	background: transparent url('images/hd_logo.gif') top left no-repeat;
+}
+
+#blog-title a:active,
+#blog-title a:hover {
+    color: #586c7a;
+}
+#blog-description {
+    color:#586c7a;
+    font-size:13px;
+    font-style:italic;text-indent:-9999px;
+}
+
+
+/* =Menu
+	-------------------------------------------------------------- */
+	.skip-link {
+	    display:none;
+	}
+	#access {position:absolute; top:18px; right:15px;
+	    border-bottom:none;
+	    height:;
+	    font-size:13px;
+	    overflow:visible;
+	    z-index:100;
+	}
+
+		#access #strand-pages ul li {font-size:16px;line-height:9px; font-family:'LeagueGothicRegular', 'Arial Narrow', sans-serif;letter-spacing: .025em;
+		float:left;padding-left: 12px;} 
+			#access #strand-pages ul li a{color:#edecd5;} 
+			#access #strand-pages ul li:first-child {border-right:1px solid #586c7a; padding-right:12px;} 
+			#access #strand-pages ul li a:hover {color: #586c7a}	
+			#access #strand-pages li.current_page_item, #public-pages li.current_page_item, ul#menu-strand-pages li#menu-item-8 {padding-left:5px;margin-left:0px;} /*trick from UH--check to see in this site ID of li#menu-item if it is not -8*/
+
+/* Navigation
+	-------------------------------------------------------------- */				
+	#nav-above {display:none;}
+	#nav-below {margin-bottom:36px;}
+	
+
+/* =Footer */
+	#footer {background: #4a4336 url('images/bg_footer-gradient.png') repeat-x; margin-top:0;}
+	
+	#footer #first, #footer #second, #footer #third {float:left;margin:0 20px 0px 0px;} 
+		#footer #first {width:215px;padding-top:24px;} 	
+		#footer #second {margin-right:20px;width:460px;}
+		#footer #third {width:200px;margin-right:0;}
+			.singular #footer #third, .category #footer #third {margin-left:420px;}
+		
+			#front-page #footer #third, #strand-page #footer #third {margin:0 20px 0px 0px;}
+			
+			#subsidiary {padding-left:10px;}
+			#subsidiary{padding-top:18px;}
+			#siteinfo{text-align:left; text-indent:10px;color:#e1dace;font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;padding:18px 0 15px; font-size:9px;} 
+			#siteinfo a:link, #siteinfo a:visited {color:#e1dace;}
+			
+		#footer h3#head_about, #footer #second.aside.sub-aside h3 {height:48px; background: url('images/hd_whatis.png') top left no-repeat;margin:24px 0 6px;text-indent:-9999px}
+		#footer h3#head_navigate, #footer #third.aside.sub-aside h3 {height:48px; background: url('images/hd_navigate.png') top left no-repeat;margin:24px 0 6px;text-indent:-9999px}
+		
+		#footer #subsidiary #third #text-6.widgetcontainer.widget_text {border-top:1px dashed #f3f3ea;padding-top:6px;margin-top:18px;width:120px;}
+
+/* =Front page
+	------------------------------------------------------------  */
+	body.home, body.home #wrapper {margin-top:0;padding:0;background: url('images/bg_html.jpg');}
+	body#front-page #header {background: transparent url('images/bg_header-gradient-home.png') repeat-x 0 0px;height:66px;padding:0;}
+	body#front-page #branding/*, body#front-page #access*/ {display:none;}
+	body#front-page #main {background: url('images/bg_body.jpg');width:960px;padding-top:0px;}
+		body#front-page #main #container {margin:0;width:960px;}
+		body#front-page #main #content {padding:0;width:960px;margin: 0 0px 20px 0px;background:none;}
+			#home-banner {background: transparent url('images/home_banner-new3-short.jpg') no-repeat 15px 2px;width:960px; 
+				height:335px;margin:0px auto 10px;}
+			#home-insert {} 
+				#front-page #calendar-wrap, .dashed-box {border:1px dashed #665d4d;padding:8px;}
+				#front-page #calendar, #front-page #learn-more {padding:10px;text-align:center;color: #f3f3ea;}
+					#front-page #calendar {background: #43161b;}
+					#front-page #learn-more {background: #586c7a;padding:3px;}
+				#front-page #calendar {padding: 10px 0;}
+					#front-page #calendar ul, #front-page #public-pages ul {margin: 0 0 36px;padding-left:0;list-style:none;}
+					#front-page #calendar li {color: #fff;}	
+					#front-page #calendar li.no-events{font-size:14px; line-height:16px; margin-bottom:6px;font-style:italic;}
+					#front-page #calendar li span.cal-title, p span.cal-title{font-size:16px;font-family: Georgia, serif;font-style:italic;} 
+					#front-page #calendar li span.cal-date, p span.cal-date {font-weight:bold;font-size:12px;line-height:18px;font-family: Georgia, serif;} 
+					#front-page #calendar li span.cal-place, p span.cal-place {text-transform:uppercase;font-size:12px;line-height:24px;}
+					#front-page #calendar li span.cal-shortdesc, p span.cal-shortdesc {font-style:italic;font-size:14px;line-height:24px;}
+					#front-page #calendar li.register {
+						text-transform:uppercase;font-size:10px; font-weight:bold;line-height:12px;margin-top:6px;
+						font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;}
+					
+				#front-page #featured {padding-right:18px;}
+				#front-page #home-insert .one-third.grid_6 {background:transparent url('images/bg_vertical-rule.gif') top right repeat-y;}
+				#front-page #public-pages {} 
+					#front-page #public-pages ul {margin-bottom:18px;}
+
+				
+	#front-page .entry-content img {/*display:block;*/ margin:0 18px 18px 0;}
+	
+	h2#upcoming {height:53px; background: #655f53 url('images/hd_comingup.png') top center no-repeat;margin:-10px 0 18px;}
+
+/* =Strand/Theme Splash Page
+	------------------------------------------------------------  */
+	h1#warandsociety, h1#forginganation {height:60px; margin:24px 0 18px;}
+	h1#forginganation {background: transparent url('images/hd_us-history.png') top center no-repeat;}
+	h1#warandsociety {background: transparent url('images/hd_war-society.png') top center no-repeat;}
+	
+	p span.cal-title {color: #602027;}
+	#front-page span.cal-title {color: #fff;} 
+	
+	#splash-schedule {
+		background-color: rgb(243, 243, 234);
+		background-color: rgba(255,255,255,0.5);
+		margin-bottom: 18px;
+		padding: 2px 12px 10px;
+	}
+	
+	#container-splash {margin-bottom:18px;}
+/* =Public Landing Pages
+	------------------------------------------------------------  */
+
+/* =entry */
+.hentry {padding:0;overflow:hidden;} 
+.singular .entry-content {margin-top:6px;padding-top:0px;} 
+.single .entry-content {border-top:0;margin-top:3px;float:left;margin-left:24px;width:400px;}
+.entry-content {margin:0 0 18px;padding:0;}
+.entry-content img, .entry-content .wp-post-image  {float:left;margin:0 24px 24px 0; background: #fff; padding:10px;border:1px solid #665D4D;} 
+	.entry-content img.plain{border:none;padding:0px;background:transparent}
+.entry-meta {margin:0 0 6px;padding-left:1px;}
+.single .entry-meta{display:block; float:left; width:140px;margin:24px 10px 0 0;}
+.entry-utility {margin:0 0 24px;clear:both;}	
+.recent-post{margin:12px 0 6px;border-bottom:1px dashed #665d4d;}
+
+/* admin visibles */
+.edit-link {float:right; margin-right:20px;}
+
+
+/* MISC */
+.avatar {border:1px solid #665D4D;
+	background-color:rgb(243, 243, 234);
+	background-color: rgba(255, 255, 255, 0.75);
+	padding:10px;}
+	
+.navigation {font-size:16px;font-family: 'LeagueGothicRegular', 'Arial Narrow', sans-serif;}
+	.navigation a:link, .navigation a:visited, .navigation a:active {color: #665d4d; font-weight:normal;}
+	.nav-previous {float:left;} .nav-next {float:right;}
+
+img.attachment-post-thumbnail {width:110px; height:110px;}
+
+abbr.published {border-bottom:none;}
+
+body.ss-base-body {background:transparent;}
+
+/* ==comments styles  */
+#comments {margin:18px 0; border:1px dashed #665d4d; padding:12px;} #commentform {font-family:Arial, sans-serif;}
+#respond h3 {
+	text-align:center;font-family: 'LeagueGothicRegular', 'Arial Narrow', sans-serif;font-size:22px; letter-spacing:.025em;
+	background: #665d4d; color: #f3f3ea;
+	display:block; height:36px; width:160px;margin:-13px auto 18px;padding-top:14px;}
+#commentform .form-label {margin-bottom:6px;color: #665d4d;text-transform:uppercase;}
+#commentform textarea {width:570px;margin-bottom:6px;}
+p#login, .form-section p {font-family: Helvetica, Arial, sans-serif;font-size:12px;}
+p#login {text-align:right;}
+
+/* ==href attributes   */
+/* provide all selectors the same background image, attribute selector finds href ending in a specific extension
+---------------------------------------- */
+a[rel="external"],
+a[href$="ppt"],
+a[href$="pdf"],
+a[href$="doc"],
+a[href$="flipchart"],
+a[href$="mp3"] {
+	padding-left:22px; background:url('images/bg_file-icons.png') no-repeat 0 0;
+	}
+
+/* position the y-coordinate of the sprite image for each file type
+---------------------------------------- */
+a[rel="external"]{background-position: 2px 0px;}
+a[href$="ppt"]{background-position: 2px -53px;}
+a[href$="pdf"]{background-position: 2px -103px;}
+a[href$="doc"]{background-position: 2px -153px;}
+a[href$="flipchart"]{background-position: 2px -203px;}
+a[href$="mp3"]{background-position: 2px -253px;}
+
+/* insert parenthetical file info after the link
+---------------------------------------- */
+a[href$=".ppt"]:after{content: "(Powerpoint)"; color:#586C7A; font-size:10px; margin-left:3px;}
+a[href$=".pdf"]:after{content: "(PDF)"; color:#586C7A; font-size:10px; margin-left:3px;}
+a[href$=".doc"]:after{content: "(Word)"; color:#586C7A; font-size:10px; margin-left:3px;}
+a[href$=".flipchart"]:after{content: "(Flipchart)"; color:#586C7A; font-size:10px; margin-left:3px;}
+a[href$=".mp3"]:after{content: "(mp3 audio)"; color:#586C7A; font-size:10px; margin-left:3px;}
+
+strong a:link {font-weight:bold;}
+
+/* ==tables styles */
+table.program {
+	width:600px;margin:12px 0;border-collapse:collapse;font-family: Arial, Helvetica, sans-serif;font-size:.75em; line-height:1.25em;
+}
+
+.program caption{
+	text-align:center; text-transform:uppercase;font-size:1em; font-weight:bold; font-family: "Arial Narrow", "Helvetica Neue Condensed", sans-serif;
+	padding:9px 0; color:#fff; background:#411;margin-bottom:1px;
+}
+.program thead{background:#d6d0c4;} 
+
+.program td{background: #c7c2b1;}
+
+.program th, .program td {vertical-align:middle;text-align:center;padding:10px 10px 10px 5px;}
+
+.program tr, .program td {border-bottom:1px solid #fff;}
+.program tbody tr th {background:#91897c;border-right:1px solid #fff; vertical-align:middle;text-align:right;}
+
+.program a{color:#411;font-weight:bold;}
+.program em {font-weight:bold;}
